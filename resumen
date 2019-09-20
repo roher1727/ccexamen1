@@ -1,0 +1,21 @@
+Para poder plantear un caso general de m productores y n 
+consumidores, se necesita algo mas complejo que un buffer 
+y un semaforo simple. 
+
+Los productores ahora además de tener una variable semáforo,
+contarán con una variable que almacena la cantidad de unidades
+de memoria que toman del buffer. Con esta variable es posible
+definir un orden de consumo y de cuando producir,
+de los productores y consumidores.
+
+Para definir el orden de consumo, existen en la actualidad 
+muchos algoritmos de planificación. En el texto se menciona
+que el orden lo define el tamaño de unidades de buffer que 
+necesita un productor. Primero se agregara la información del 
+productor con mayor peso, despues del segundo mayor y asi 
+sucesivamente hasta llena el buffer. Si ya no hay mas espacio
+en el buffer, el productor entrara en modo de espera, hasta que
+se libere espacio.
+
+Dijkstra define el uso de dos variables para definir quien
+consume y cuando se produce.
